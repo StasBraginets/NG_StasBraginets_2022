@@ -8,7 +8,7 @@ int main()
     cout << "Enter your age: ";
     cin >> age;
 
-    if (age > 10)
+    if (age > 10 && age <= 120)
     {
         short answer;
 
