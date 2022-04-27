@@ -12,24 +12,22 @@ int main()
     l = number / 2;
     if (number > 2 && number % 2 == 0) // if the numeric is pair
     {
-        for (j = 1; j < l; j++)
-            {
-                cout << " ";
-            }
-            cout << "*";
-
         for (i = 0; i <= number; i += 2)
         {
-            for (j = 1; j <= l; j++)
+            for (j = 1; j < l; j++)
             {
                 cout << " ";
             }
-
+            if (i == 0)
+            {
+                cout << "*";
+                cout << endl;
+                continue;
+            }
             for (k = i; k > 0; k--)
             {
                 cout << "*";
             }
-
             l--;
             cout << endl;
         }
