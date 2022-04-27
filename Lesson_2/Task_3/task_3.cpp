@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     int number;
-    short sum = 0, fraction, hash, last_number;
+    short sum = 0, last_number;
 
     cout << "Enter the number: ";
     cin >> number;
@@ -12,16 +12,13 @@ int main()
     last_number = number % 10;
     for (int i = number; i != 0; i /= 10)
     {
-        fraction = i % 10;
-        hash = i / 10 % 10;
-
-        if (fraction == hash)
+        if (i % 10 == i / 10 % 10)
         {
-            sum += hash;
+            sum += i / 10 % 10;
         }
-        else if (hash == 0)
+        else if (i / 10 % 10 == 0)
         {
-            if (last_number == fraction)
+            if (last_number == i % 10)
             {
                 sum += last_number;
             }
