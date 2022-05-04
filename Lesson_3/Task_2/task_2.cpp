@@ -28,31 +28,19 @@ int main(void)
     }
     cout << endl;
 
-    // Check the elements of arrays
-    if (arr_num1[0] > arr_num2[0] || (arr_num1[0] == arr_num2[0] && arr_num1[1] > arr_num2[1]) ||
-        (arr_num1[0] == arr_num2[0] && arr_num1[1] == arr_num2[1] && arr_num1[2] > arr_num2[2]))
+    //The elements of array to integer number
+    short x = arr_num1[0] * 1000 + arr_num1[1] * 100 +
+              arr_num1[2] * 10 + arr_num1[3];
+    short y = arr_num2[0] * 1000 + arr_num2[1] * 100 +
+              arr_num2[2] * 10 + arr_num2[3];
+
+    if (x > y)
     {
-        for (i = 0; i < Size; i++)
-        {
-            cout << arr_num1[i];
-        }
-        cout << " > ";
-        for (i = 0; i < Size; i++)
-        {
-            cout << arr_num2[i];
-        }
+        cout << x << " > " << y << endl;
     }
     else
     {
-        for (i = 0; i < Size; i++)
-        {
-            cout << arr_num1[i];
-        }
-        cout << " < ";
-        for (i = 0; i < Size; i++)
-        {
-            cout << arr_num2[i];
-        }
+        cout << x << " < " << y << endl;
     }
 
     return 0;
