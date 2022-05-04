@@ -19,19 +19,16 @@ int main()
         {
             cout << "You are awesome!" << endl;
         }
-        else if (answer == 0)
+        else
         {
             cout << "Why?" << endl;
         }
     }
-    else if (age > 0 && age <= 10)
+    else
     {
         cout << "You are already so big!" << endl;
     }
-    else
-    {
-        cout << "Incorrect input!!" << endl;
-    }
+
 
     return 0;
 }
