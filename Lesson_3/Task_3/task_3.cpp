@@ -6,26 +6,25 @@ using namespace std;
 int main()
 {
     int arr_num[Size] = {};
-    short i = 0, j = 0, l = 0, the_biggest = 0, rows = 0;
+    short i = 0, j = 0, l = 0, colums = 0, rows = 0;
 
-    for (i = 0; i < Size; i++)  // Fill array until 0
+    for (colums = 0; colums < Size; colums++)  // Fill array until 0
     {
-        cout << "Enter #" << i + 1 << " element: ";
-        cin >> arr_num[i];
-        if (arr_num[i] == 0)
+        cout << "Enter #" << colums + 1 << " element: ";
+        cin >> arr_num[colums];
+        if (arr_num[colums] == 0)
         {
             break;
         }
-        else if (the_biggest < arr_num[i])  // Find the biggest element in array
+        else if (rows < arr_num[colums])  // Find the biggest element in array
         {
-            the_biggest = arr_num[i];
+            rows = arr_num[colums];
         }
-        rows++;
     }
 
-    for (i = 0; i < the_biggest; i++)   // Outputing
+    for (; rows > 0; rows--)   // Outputing
     {
-        for (l = 0; l < rows; l++)
+        for (l = 0; l < colums; l++)
         {
             if (arr_num[l] < 1)
             {
@@ -37,7 +36,7 @@ int main()
             }
         }
 
-        for (j = 0; j < rows; j++)
+        for (j = 0; j < colums; j++)
         {
             arr_num[j] -= 1;
         }
