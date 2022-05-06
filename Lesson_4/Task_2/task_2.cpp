@@ -1,7 +1,5 @@
 // All vowels that are under the even index
 #include <iostream>
-#include <cctype>
-#include <cstring>
 
 #define Size 100
 using namespace std;
@@ -14,14 +12,16 @@ int main()
 
     //Checking
     cout << "All vowels that are under the even index!" << endl;
-    for (short i = 0; i < strlen(str); i++)
+    short iter_str = 0;
+    while (str[iter_str] != '\0')
     {
-        if ((str[i] == 'a' && i % 2 == 0) || (str[i] == 'e' && i % 2 == 0) ||
-            (str[i] == 'i' && i % 2 == 0) || (str[i] == 'o' && i % 2 == 0) ||
-            (str[i] == 'u' && i % 2 == 0) || (str[i] == 'y' && i % 2 == 0))
+        if ((str[iter_str] == 'a' && iter_str % 2 == 0) || (str[iter_str] == 'e' && iter_str % 2 == 0) ||
+            (str[iter_str] == 'i' && iter_str % 2 == 0) || (str[iter_str] == 'o' && iter_str % 2 == 0) ||
+            (str[iter_str] == 'u' && iter_str % 2 == 0) || (str[iter_str] == 'y' && iter_str % 2 == 0))
         {
-            cout << str[i] << " ";
+            cout << str[iter_str] << " ";
         }
+        iter_str++;
     }
 
     return 0;
