@@ -9,7 +9,7 @@ int main(void)
     using namespace std;
 
     int arr_num1[Size], arr_num2[Size];
-    short i = 0;
+    short i = 0, j = 0;
 
     // random number generation
     srand(time(NULL));
@@ -29,14 +29,21 @@ int main(void)
     cout << endl;
 
     //The elements of array to integer number
-    short x = arr_num1[0] * 1000 + arr_num1[1] * 100 +
-              arr_num1[2] * 10 + arr_num1[3];
-    short y = arr_num2[0] * 1000 + arr_num2[1] * 100 +
-              arr_num2[2] * 10 + arr_num2[3];
+    short x = 0, y = 0;
+    for (i = Size-1, j = 1; i >= 0; i--, j *= 10)
+    {
+        x += arr_num1[i] * j;
+        y += arr_num2[i] * j;
+    }
 
+    //Checking
     if (x > y)
     {
         cout << x << " > " << y << endl;
+    }
+    else if (x == y)
+    {
+        cout << x << " = " << y << endl;
     }
     else
     {
