@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     int arr_num[Size] = {};
-    short i = 0, j = 0, l = 0, colums = 0, rows = 0;
+    short i = 0, l = 0, colums = 0, rows = 0;
 
     for (colums = 0; colums < Size; colums++)  // Fill array until 0
     {
@@ -36,9 +36,9 @@ int main()
             }
         }
 
-        for (j = 0; j < colums; j++)
+        for (l = 0; l < colums; l++)
         {
-            arr_num[j] -= 1;
+            arr_num[l] -= 1;
         }
         cout << endl;
     }
