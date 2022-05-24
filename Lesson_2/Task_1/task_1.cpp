@@ -1,3 +1,4 @@
+// Output the frame
 #include <iostream>
 
 using namespace std;
@@ -17,10 +18,9 @@ int main()
     }
     else
     {
-        short i = 0, j = 0;
-        for (i = 0; i < size; i++)
+        for (short i = 0; i < size; i++)
         {
-            for (j = 0; j < size ; j++)
+            for (short j = 0; j < size ; j++)
             {
                 if (i == 0 || i == size - 1 || j == 0 || j == size - 1)
                 {
@@ -34,7 +34,6 @@ int main()
             cout << endl;
         }
         cout << endl;
-
     }
 
     return 0;
