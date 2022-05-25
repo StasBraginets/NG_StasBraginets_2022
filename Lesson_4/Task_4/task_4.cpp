@@ -2,15 +2,15 @@
 #include <iostream>
 #include <cctype>
 
-#define Size 100
+#define SIZE 100
 using namespace std;
 int main()
 {
-    char str[Size];
+    char str[SIZE];
     short i = 0, words = 0;
 
     cout << "Enter string!" << endl;
-    cin.getline(str, Size);
+    cin.getline(str, SIZE);
 
     if (isalpha(str[0]))
     {
@@ -28,7 +28,6 @@ int main()
             (isspace(str[i]) && islower(str[i+1])))
         {
             words++;
-
         }
 
         i++;
