@@ -1,17 +1,17 @@
 // Which of two string is bigger
 #include <iostream>
-#define Size 100
+#define SIZE 100
 
 using namespace std;
 int main()
 {
-    char str1[Size];
-    char str2[Size];
+    char str1[SIZE];
+    char str2[SIZE];
 
     cout << "Enter the first string!!" << endl;
-    cin.getline(str1, Size);
+    cin.getline(str1, SIZE);
     cout << "Enter the second string!!" << endl;
-    cin.getline(str2, Size);
+    cin.getline(str2, SIZE);
 
     // The length of the first string
     short count_str1 = 0;
