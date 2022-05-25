@@ -22,7 +22,7 @@ int main()
         }
     }
 
-    for (; rows > 0; rows--)   // Outputing
+    while (rows > 0)   // Outputing
     {
         for (l = 0; l < colums; l++)
         {
@@ -38,6 +38,7 @@ int main()
             }
         }
         cout << endl;
+        rows--;
     }
 
     return 0;
