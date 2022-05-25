@@ -1,14 +1,14 @@
 #include <iostream>
 
-#define Size 20
+#define SIZE 20
 
 using namespace std;
 int main()
 {
-    int arr_num[Size] = {};
+    int arr_num[SIZE] = {};
     short l = 0, colums = 0, rows = 0;
 
-    for (colums = 0; colums < Size; colums++)  // Fill array until 0
+    for (colums = 0; colums < SIZE; colums++)  // Fill array until 0
     {
         cout << "Enter #" << colums + 1 << " element: ";
         cin >> arr_num[colums];
@@ -22,7 +22,7 @@ int main()
         }
     }
 
-    while (rows > 0)   // Outputing
+    while (rows > 0) // Outputing
     {
         for (l = 0; l < colums; l++)
         {
