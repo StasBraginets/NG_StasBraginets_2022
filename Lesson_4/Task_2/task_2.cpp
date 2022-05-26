@@ -1,14 +1,14 @@
 // All vowels that are under the even index
 #include <iostream>
 
-#define Size 100
+#define SIZE 100
 using namespace std;
 int main()
 {
-    char str[Size];
+    char str[SIZE];
 
     cout << "Enter the string!!" << endl;
-    cin.getline(str, Size);
+    cin.getline(str, SIZE);
 
     //Checking
     cout << "All vowels that are under the even index!" << endl;
