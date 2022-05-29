@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     char str[SIZE];
-    short i = 0, words = 0;
+    short words = 0;
 
     cout << "Enter string!" << endl;
     cin.getline(str, SIZE);
@@ -21,16 +21,18 @@ int main()
         }
     }
 
-    while(str[i] != '\0')
+    for (short i = 0; str[i] != '\0'; i++)
     {
-        if ((isspace(str[i]) && isupper(str[i+1]))||
-            (isupper(str[i]) && !isspace(str[i-1]))||
-            (isspace(str[i]) && islower(str[i+1])))
+        if (isupper(str[i]) && isupper(str[i-1]))
+        {
+            continue;
+        }
+        else if ((isspace(str[i]) && isupper(str[i+1]))||
+                (isupper(str[i]) && !isspace(str[i-1]))||
+                (isspace(str[i]) && islower(str[i+1])))
         {
             words++;
         }
-
-        i++;
     }
 
     cout << "The amount of words: " << words << endl;
