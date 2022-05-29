@@ -28,7 +28,7 @@ char input_string(char str[])
 
 void find_word(char str[])
 {
-    short i = 0, words = 0;
+    short words = 0;
 
     if (isalpha(str[0]))
     {
@@ -39,16 +39,18 @@ void find_word(char str[])
         }
     }
 
-    while(str[i] != '\0')
+    for (short i = 0; str[i] != '\0'; i++)
     {
-        if ((isspace(str[i]) && isupper(str[i+1]))||
-            (isupper(str[i]) && !isspace(str[i-1]))||
-            (isspace(str[i]) && islower(str[i+1])))
+        if (isupper(str[i]) && isupper(str[i-1]))
+        {
+            continue;
+        }
+        else if ((isspace(str[i]) && isupper(str[i+1]))||
+                (isupper(str[i]) && !isspace(str[i-1]))||
+                (isspace(str[i]) && islower(str[i+1])))
         {
             words++;
         }
-
-        i++;
     }
 
     cout << "The amount of words: " << words << endl;
