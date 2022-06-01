@@ -1,21 +1,19 @@
 //Count the amount of words
 #include <iostream>
-#include <cctype>
 
-#define SIZE 100
 using namespace std;
 int main()
 {
+    short words = 0, SIZE = 100;
     char str[SIZE];
-    short words = 0;
 
     cout << "Enter string!" << endl;
     cin.getline(str, SIZE);
 
-    if (isalpha(str[0]))
+    if (str[0] > 'a' && str[0] < 'z')
     {
         words++;
-        if (isupper(str[0]))
+        if (str[0] > 'A' && str[0] < 'Z')
         {
             words--;
         }
@@ -23,13 +21,13 @@ int main()
 
     for (short i = 0; str[i] != '\0'; i++)
     {
-        if (isupper(str[i]) && isupper(str[i-1]))
+        if ((str[i] > 'A' && str[i] < 'Z') && (str[i-1] > 'A' && str[i-1] < 'Z'))
         {
             continue;
         }
-        else if ((isspace(str[i]) && isupper(str[i+1]))||
-                (isupper(str[i]) && !isspace(str[i-1]))||
-                (isspace(str[i]) && islower(str[i+1])))
+        else if ((str[i] == ' ' && (str[i+1] > 'A' && str[i+1] < 'Z'))||
+                ((str[i] > 'A' && str[i] < 'Z') && str[i-1] != ' ')||
+                (str[i] == ' ' && (str[i+1] > 'a' && str[i+1] < 'z')))
         {
             words++;
         }
