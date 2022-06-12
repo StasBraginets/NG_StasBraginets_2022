@@ -39,3 +39,4 @@ obj/
 # Qt
 build-*
 *.pro.user
+*.user
