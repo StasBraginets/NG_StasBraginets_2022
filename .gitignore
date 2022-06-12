@@ -1,10 +1,14 @@
 # Prerequisites
-*bin\*
-*obj\*
+**/bin
+**/obj
 *.cbp
-*.depend
 *.layout
+*.depend
 *.d
+
+# Executable
+*.exe
+*.dll
 
 # Compiled Object files
 *.slo
@@ -12,26 +16,8 @@
 *.o
 *.obj
 
-# Precompiled Headers
-*.gch
-*.pch
+# Qt project files
+*.user
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# Desktop file
+*.ini
