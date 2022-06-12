@@ -63,6 +63,5 @@ int main()
         use_firearms_one.shoot();
     }
     else {return 0;}
-
     return 0;
 }
