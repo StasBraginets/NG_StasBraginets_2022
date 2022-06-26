@@ -29,20 +29,30 @@ void MainWindow::WordCounter()
     bool flag;
     words_list[words_list.size()-1].toInt(&flag); // check if the particle is number
 
-
     if (iter == words_list.size())
     {
         ui->sBox->setValue(ui->sBox->value() - 1);
+        if ((str_edit[str_edit.size()-1] >= 'A' && str_edit[str_edit.size()-1] <= 'Z') &&
+            (str_edit[str_edit.size()-2] >= 'a' && str_edit[str_edit.size()-2] <= 'z'))
+        {
+            ui->sBox->setValue(ui->sBox->value() + 1);
+        }
     }
+    /*else if (str_edit[str_edit.size()-1] == " " && str_edit[str_edit.size()-2] == " ")
+    {
+        //ui->sBox->setValue(ui->sBox->value() - 1);
+        iter = words_list.size();
+    }*/
     else if (words_list[iter] == "")
     {
-        //iter = words_list.size();
+        iter = words_list.size();
         ui->sBox->setValue(ui->sBox->value() - 1);
     }
     else if (flag == true)
         ui->sBox->setValue(ui->sBox->value() - 1);
     else
         iter = words_list.size();
-    //qDebug() << words_list.size() << " " << iter;
+
+
 
 }
