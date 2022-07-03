@@ -32,10 +32,6 @@ void find_word(char str[])
     if (str[0] > 'a' && str[0] < 'z')
     {
         words++;
-        if (str[0] > 'A' && str[0] < 'Z')
-        {
-            words--;
-        }
     }
 
     for (short i = 0; str[i] != '\0'; i++)
